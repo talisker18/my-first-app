@@ -1,0 +1,8 @@
+<!--using {{serverId}}: this is called string interpolation (databinding)--> 
+<!--using attribute directive with [ngStyle]: key = CSS property, value = css value like 'red' or 'green' or use a TS function--> <!--instead of backgroundColor: you can also use correct css like 'backgroundcolor:' without camelCase.-->
+<!--ngClass: here, the key is a CSS class defined in the styles array of the server.component.ts and the value is a condition-->
+<p 
+[ngStyle]="{backgroundColor:getColor()}"
+[ngClass]="{online: serverStatus === 'online'}">
+Server with ID {{serverId}} has status {{getServerStatus()}}
+</p> 

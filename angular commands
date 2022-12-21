@@ -1,0 +1,5 @@
+ng serve
+    start server on localhost
+
+ng generate component hero-detail
+    create component with name 'hero-detail'

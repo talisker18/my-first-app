@@ -1,0 +1,21 @@
+<button 
+class="btn btn-primary" 
+[disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button> <!--property binding and event binding. event binding: bind is between () and similar to JS events like onClick-->
+<input type="text" class="form-control"
+(input)="onUpdateServerName($event)"> <!--in $event we have the data ommited by the input (event object)-->
+
+<!--same as other input, but using 2 way binding. for this we need to add FormsModule in app.module.ts-->
+<input type="text" class="form-control"
+[(ngModel)]="serverName">
+
+<p>output servername: {{serverName}}</p>
+<br><br>
+<p>output allowNewServer var: {{allowNewServer}}</p> <!--string interpolation-->
+<p [innerText]="allowNewServer">same as above but with inner text. this text will be overridden</p>
+<!--<p>print server creation status: {{serverCreationStatus}}</p>-->
+<p *ngIf="serverCreated; else noServer">Server was created, servername is {{serverName}}</p> <!--using built-in directive. the '*' means structural directive, it will change the DOM. If there is no server created, jump to ngTemplate marked as 'noServer'-->
+<ng-template #noServer>
+    <p>No server created</p>
+</ng-template>
+<hr>
+<app-server *ngFor="let currentServer of servers"></app-server> <!--another built-in (structural) directive. servers refers to the array-->

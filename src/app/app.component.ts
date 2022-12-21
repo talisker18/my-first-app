@@ -4,7 +4,13 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
+  //or use 'styles' instead of 'styleUrls'
 })
 export class AppComponent {
-  title = 'my-first-app';
+  log = [];
+
+  addLogToArray(){
+    this.log.push(new Date());
+  }
+  
 }
