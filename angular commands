@@ -3,3 +3,11 @@ ng serve
 
 ng generate component hero-detail
     create component with name 'hero-detail'
+    
+ng new --no-strict <app_name>
+  create new angular project
+  
+npm install --save bootstrap@3
+  inside the project folder: exec this command to install bootstrap css for this project
+    this will save bootstrap in the 'node_module' folder
+    then we have also to add the css stylesheet into our angular.json file in the 'styles' array. put this path there 'node_modules/bootstrap/dist/css/bootstrap.min.css'
