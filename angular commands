@@ -11,3 +11,6 @@ npm install --save bootstrap@3
   inside the project folder: exec this command to install bootstrap css for this project
     this will save bootstrap in the 'node_module' folder
     then we have also to add the css stylesheet into our angular.json file in the 'styles' array. put this path there 'node_modules/bootstrap/dist/css/bootstrap.min.css'
+
+ng generate directive <directive_name>
+  create new directive, or use ng g d
